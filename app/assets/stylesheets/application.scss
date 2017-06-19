@@ -15,3 +15,27 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+$oy-theme: #64A649;
+body {
+  background-color: $oy-theme;
+}
+.navbar-default {
+  background-color: green;
+  border-color: black;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand {
+  color: #ffeeee;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: #119033;
+}
+.navbar-default .navbar-brand:focus, 
+.navbar-default .navbar-brand:hover {
+  color: #ffffff;
+  background-color: transparent;
+}
