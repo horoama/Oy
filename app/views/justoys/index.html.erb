@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Justoys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @justoys.each do |justoy| %>
+      <tr>
+        <td><%= justoy.message %></td>
+        <td><%= link_to 'Show', justoy %></td>
+        <td><%= link_to 'Edit', edit_justoy_path(justoy) %></td>
+        <td><%= link_to 'Destroy', justoy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Justoy', new_justoy_path %>

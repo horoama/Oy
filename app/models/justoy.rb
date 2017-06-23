@@ -1,0 +1,2 @@
+class Justoy < ApplicationRecord
+end
