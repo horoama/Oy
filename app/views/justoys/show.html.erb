@@ -4,6 +4,14 @@
   <strong>Message:</strong>
   <%= @justoy.message %>
 </p>
+<p>
+  <strong>From:</strong>
+  <%= @justoy.sender_id %>
+</p>
+<p>
+  <strong>To:</strong>
+  <%= @justoy.receiver_id %>
+</p>
 
 <%= link_to 'Edit', edit_justoy_path(@justoy) %> |
 <%= link_to 'Back', justoys_path %>

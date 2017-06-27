@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Justoys</h1>
+<h1>Public Oy</h1>
 
 <table>
   <thead>
     <tr>
       <th>Message</th>
+      <th>Sender</th>
+      <th>Receiver</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +16,8 @@
     <% @justoys.each do |justoy| %>
       <tr>
         <td><%= justoy.message %></td>
+        <td><%= justoy.sender_id %></td>
+        <td><%= justoy.receiver_id %></td>
         <td><%= link_to 'Show', justoy %></td>
         <td><%= link_to 'Edit', edit_justoy_path(justoy) %></td>
         <td><%= link_to 'Destroy', justoy, method: :delete, data: { confirm: 'Are you sure?' } %></td>

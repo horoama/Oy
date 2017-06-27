@@ -69,6 +69,6 @@ class JustoysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def justoy_params
-      params.require(:justoy).permit(:message)
+      params.require(:justoy).permit(:message, :sender_id, :receiver_id)
     end
 end

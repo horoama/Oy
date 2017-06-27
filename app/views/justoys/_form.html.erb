@@ -12,8 +12,19 @@
   <% end %>
 
   <div class="field">
+      <p>
     <%= f.label :message %>
     <%= f.text_area :message %>
+      </p>
+      <p>
+    <%= f.label :sender_id %>
+    <%= f.text_field :sender_id %>
+      </p>
+      <p>
+    <%= f.label :receiver_id %>
+    <%= f.text_field :receiver_id %>
+      </p>
+
   </div>
 
   <div class="actions">
