@@ -1,0 +1,15 @@
+<div class="panel panel-default" style="border: 0px;">
+    <div class="panel-heading">
+        <div class="panel-title">
+            Following
+        </div>
+    </div>
+    <div class="panel-body">
+            <% @followings.each do |following| %>
+                    <div class="row">
+                        <span class="col-md-10 col-xs-10 following"><%= following.username %></span>
+                        <span class="col-md-2 col-xs-2 pull-right btn-oy">Oy</span>
+                    </div>
+            <% end %>
+    </div>
+</div>
