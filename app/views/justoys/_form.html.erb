@@ -14,15 +14,17 @@
   <div class="field">
       <p>
     <%= f.label :message %>
+    <div>
     <%= f.text_area :message %>
+    </div>
       </p>
       <p>
-    <%= f.label :sender_id %>
-    <%= f.text_field :sender_id %>
-      </p>
-      <p>
-    <%= f.label :receiver_id %>
-    <%= f.text_field :receiver_id %>
+    <% if @receiver_id %>
+        <%= f.hidden_field :receiver_id,  :value => @receiver_id.to_s %>
+    <% else %>
+        <%= f.label :receiver_id %>
+        <%= f.text_field :receiver_id %>
+    <% end %>
       </p>
 
   </div>

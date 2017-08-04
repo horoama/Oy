@@ -14,6 +14,7 @@ class JustoysController < ApplicationController
 
   # GET /justoys/new
   def new
+    @receiver_id = params[:receiver_id] if params[:receiver_id]
     @justoy = Justoy.new
   end
 
@@ -24,6 +25,7 @@ class JustoysController < ApplicationController
   # POST /justoys
   # POST /justoys.json
   def create
+    params[:justoy][:sender_id] = current_user.id
     @justoy = Justoy.new(justoy_params)
 
     respond_to do |format|

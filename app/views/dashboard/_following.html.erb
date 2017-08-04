@@ -8,7 +8,7 @@
             <% @followings.each do |following| %>
                     <div class="row">
                         <span class="col-md-10 col-xs-10 following"><%= following.username %></span>
-                        <span class="col-md-2 col-xs-2 pull-right btn-oy">Oy</span>
+                            <%= link_to "OY",  {:controller => "justoys",  :action => "new" , :receiver_id => following.id}, {:class => "btn-oy col-md-2 col-xs-2 pull-right"}%>
                     </div>
             <% end %>
     </div>
